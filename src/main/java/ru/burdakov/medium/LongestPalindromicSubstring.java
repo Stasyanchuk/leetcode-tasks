@@ -2,7 +2,7 @@ package ru.burdakov.medium;
 
 /**
  * NOT RESOLVED
- *
+ * <p>
  * Time Limit Exceeded
  * Test 95/141
  */
@@ -37,6 +37,7 @@ public class LongestPalindromicSubstring {
      * @return
      */
     public String longestPalindrome(String s) {
+        long start = System.nanoTime();
 
         if (s.length() == 1)
             return s;
@@ -68,6 +69,9 @@ public class LongestPalindromicSubstring {
                 }
             }
         }
+
+        long finish = System.nanoTime();
+        System.out.println("Time = " + (finish - start));
 
         System.out.println(longest);
         System.out.println(i + " " + j);
